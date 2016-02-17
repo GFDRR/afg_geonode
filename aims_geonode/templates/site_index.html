@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% comment %}
+This is where you can override the hero area block. You can simply modify the content below or replace it wholesale to meet your own needs. 
+{% endcomment %}
+  {% block hero %}
+  <div class="jumbotron" id="banner-home">
+    <div class="container-fluid">
+
+      <div style="width:1100px;margin:0 auto;">
+      <h2 style="text-align:center;">{% trans "Welcome to Afghanistan GeoNode" %}</h2>
+      <p style="text-shadow:1px 1px 0px rgba(0,0,0,0.5);font-weight: 400;">{% blocktrans %}Afghanistan GeoNode is Multi-peril risk assessment geospatial platform for creating and sharing geospatial data and maps in order to maintain, update and disseminate information to stakeholders and users for decision-making about disaster risk.{% endblocktrans %}</p></div>
+      <!-- <p>{% blocktrans %}If you have any questions about the software or service, join our <a href="https://groups.google.com/d/forum/geonode-users">mailing list</a>.{% endblocktrans %}</p> -->
+      <!-- <span>{% trans 'Need help?' %} <a href="http://docs.geonode.org/en/latest/tutorials/users/quickstart/index.html">{% trans 'Getting Started' %}</a></span> -->
+      <!-- <ul id="exploration">
+        <li style="margin-bottom:20px;"><a href="" style="font-size:24px;font-weight:bold;color:#fff;">Upload Layers</a></li>
+        <li><a style="font-size:20px;color:#fff;" href="/layers">Explore Layers</a></li>
+        <li><a style="font-size:20px;color:#fff;" href="/maps">Explore Maps</a></li>
+      </ul> -->
+      <div class="btn-group" id="exploration">
+        <a class="btn btn-info" href=""><strong>Upload Layers</strong></a>
+        <a class="btn btn-primary" href="/layers"><strong>Explore Layers</strong></a>
+        <a class="btn btn-info" href="/maps"><strong>Explore Maps</strong></a>
+      </div>
+      <!-- <ul id="logos">
+        <li><img src="/static/img/The World Bank.png" /></li>
+        <li><img src="/static/img/GFDRR.png" /></li>
+        <li><img src="/static/img/AIMS.png" /></li>
+        <li><img src="/static/img/GIRoA.png" /></li>
+      </ul> -->
+    </div>
+  </div>
+  {% endblock %}
