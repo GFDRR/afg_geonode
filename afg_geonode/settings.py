@@ -26,14 +26,14 @@ from geonode.settings import *
 # General Django development settings
 #
 
-SITENAME = 'aims_geonode'
+SITENAME = 'afg_geonode'
 
 # Defines the directory that contains the settings file as the LOCAL_ROOT
 # It is used for relative settings elsewhere.
 GEONODE_ROOT = os.path.abspath(os.path.abspath(geonode.__file__))
 LOCAL_ROOT = os.path.abspath(os.path.dirname(__file__))
 
-WSGI_APPLICATION = "aims_geonode.wsgi.application"
+WSGI_APPLICATION = "afg_geonode.wsgi.application"
 
 
 # Load more settings from a file called local_settings.py if it exists
@@ -50,12 +50,11 @@ STATICFILES_DIRS.append(
 # Note that Django automatically includes the "templates" dir in all the
 # INSTALLED_APPS, se there is no need to add maps/templates or admin/templates
 TEMPLATE_DIRS = (
-    # os.path.join(LOCAL_ROOT, "templates"),
-	"/home/aims/aims_geonode/aims_geonode/templates",
-	# ) + TEMPLATE_DIRS
-)
+     os.path.join(LOCAL_ROOT, "templates"),
+) + TEMPLATE_DIRS
+
 # Location of url mappings
-ROOT_URLCONF = 'aims_geonode.urls'
+ROOT_URLCONF = 'afg_geonode.urls'
 
 # Location of locale files
 LOCALE_PATHS = (
