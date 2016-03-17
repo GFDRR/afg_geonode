@@ -1,9 +1,9 @@
 - hosts: production 
-  remote_user: user
+  remote_user: vagrant
   vars:
-    app_name: {{ project_name }} 
-    github_user: {{ project_name }}
-    server_name: 0.0.0.0
-    deploy_user: user 
+    app_name: afg_geonode 
+    github_user: gfdrr 
+    server_name: 192.168.10.50 
+    deploy_user: vagrant
   roles:
      - { role: ortelius.geonode }
